@@ -10,7 +10,7 @@ Spark will delete all tweets posted yesterday.
 | Key      | Value                   |
 | -------- | ----------------------- |
 | Trigger  | Timer                   |
-| Schedule | 13:30 (GMT) on everyday |
+| Schedule | 15:30 (GMT) on everyday |
 
 ## Environment Variables
 
