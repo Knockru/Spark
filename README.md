@@ -23,10 +23,10 @@ Spark will delete all tweets posted yesterday.
 
 ## Key Vault Secrets
 
-| Secret                        | Description                            |
-| ----------------------------- | -------------------------------------- |
-| `TWITTER_CONSUMER_KEY`        | Twitter Application Consumer Key       |
-| `TWITTER_CONSUMER_SECRET`     | Twitter Application Consumer Secret    |
-| `TWITTER_ACCESS_TOKEN`        | Twitter Authorized Access Token        |
-| `TWITTER_ACCESS_TOKEN_SECRET` | Twitter Authorized Access Token Secret |
+| Secret                          | Description                            |
+| ------------------------------- | -------------------------------------- |
+| `SparkTwitterConsumerKey`       | Twitter Application Consumer Key       |
+| `SparkTwitterConsumerSecret`    | Twitter Application Consumer Secret    |
+| `SparkTwitterAccessToken`       | Twitter Authorized Access Token        |
+| `SparkTwitterAccessTokenSecret` | Twitter Authorized Access Token Secret |
 
