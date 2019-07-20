@@ -1,0 +1,29 @@
+{
+  "extends": ["airbnb-base", "plugin:prettier/recommended", "plugin:jest/recommended", "plugin:import/typescript"],
+  "plugins": ["@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.json"
+  },
+  "globals": {
+    "document": true,
+    "fetch": true,
+    "navigator": true,
+    "window": true
+  },
+  "settings": {
+    "react": {
+      "version": "16.8.5"
+    }
+  },
+  "rules": {
+    // https://github.com/airbnb/javascript/blob/60b96d322277c4c71a21a05caba8eb3320e0e3fa/packages/eslint-config-airbnb-base/rules/imports.js#L71-L95
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": ["**/*{.,_}{test,spec}.{js,jsx,ts,tsx}"] }],
+    // https://github.com/airbnb/javascript/blob/60b96d322277c4c71a21a05caba8eb3320e0e3fa/packages/eslint-config-airbnb/rules/react.js#L313
+    "react/jsx-filename-extension": [true, { "extensions": [".tsx", ".jsx"] }]
+  }
+}
