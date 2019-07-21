@@ -12,21 +12,21 @@
     "test": "jest"
   },
   "dependencies": {
-    "twitter": "^1.7.1"
+    "twitter": "1.7.1"
   },
   "devDependencies": {
-    "@azure/functions": "^1.0.2-beta2",
-    "@types/jest": "^24.0.15",
-    "@types/twitter": "^1.7.0",
-    "eslint": "^6.0.1",
-    "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jest": "^22.12.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "jest": "^24.8.0",
-    "prettier": "^1.18.2",
-    "ts-jest": "^24.0.2",
-    "typescript": "^3.3.3"
+    "@azure/functions": "1.0.3",
+    "@types/jest": "24.0.15",
+    "@types/twitter": "1.7.0",
+    "eslint": "6.0.1",
+    "eslint-config-airbnb-base": "13.2.0",
+    "eslint-config-prettier": "6.0.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-jest": "22.12.0",
+    "eslint-plugin-prettier": "3.1.0",
+    "jest": "24.8.0",
+    "prettier": "1.18.2",
+    "ts-jest": "24.0.2",
+    "typescript": "3.5.3"
   }
 }
