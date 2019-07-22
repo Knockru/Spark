@@ -14,12 +14,14 @@ Spark will delete all tweets posted yesterday.
 
 ## Environment Variables
 
-| Variable                     | Description                    | Example      |
-| ---------------------------- | ------------------------------ | ------------ |
-| `SPARK_AZURE_KEY_VAULT_NAME` | Azure Key Vault Container Name | `container`  |
-| `AZURE_CLIENT_ID`            | Azure AD Application Client ID | `xxxxxx-...` |
-| `AZURE_CLIEN_SECRET`         | Azure AD Application Secret    | `xxxxxx`     |
-| `AZURE_TENANT_ID`            | Azure AD Tenant ID             | `xxxxxx-...` |
+| Variable                     | Description                                    | Example      |
+| ---------------------------- | ---------------------------------------------- | ------------ |
+| `SPARK_AZURE_KEY_VAULT_NAME` | Azure Key Vault Container Name                 | `container`  |
+| `SPARK_DRY_RUN`              | Set to `true`, delete opration will be dry-run | `1`          |
+| `SPARK_TIME_DIFFERENCE`      | Time Difference between London                 | `+0900`      |
+| `AZURE_CLIENT_ID`            | Azure AD Application Client ID                 | `xxxxxx-...` |
+| `AZURE_CLIEN_SECRET`         | Azure AD Application Secret                    | `xxxxxx`     |
+| `AZURE_TENANT_ID`            | Azure AD Tenant ID                             | `xxxxxx-...` |
 
 ## Key Vault Secrets
 
