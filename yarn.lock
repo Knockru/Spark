@@ -34,7 +34,7 @@
   resolved "https://registry.yarnpkg.com/@azure/functions/-/functions-1.0.3.tgz#1b51d58f188903f59f39bd093fe6f7b8d88deb11"
   integrity sha512-/D+sz6LgWT+A6RRW2zhwlwhKqqDSxL6HCF1Q1lN0iXolD2FfNFZpzrOxGyGYEEXp/5Dtjp12bcRTBhMH1cBi2Q==
 
-"@azure/identity@^1.0.0-preview.1":
+"@azure/identity@1.0.0-preview.1", "@azure/identity@^1.0.0-preview.1":
   version "1.0.0-preview.1"
   resolved "https://registry.yarnpkg.com/@azure/identity/-/identity-1.0.0-preview.1.tgz#a33315cf12367b631ab34f4ef08b6e3b0073fc78"
   integrity sha512-AM/OXOVojj+A850c3Un5RTJSBh2cugYZqbicW2TzsuQAjDaAh8DnBseW1x9BhfZQ/RWk2Vh/GJ3SHK0X0Ab7dA==
@@ -46,7 +46,7 @@
     tslib "^1.9.3"
     uuid "^3.3.2"
 
-"@azure/keyvault-secrets@^4.0.0-preview.2":
+"@azure/keyvault-secrets@4.0.0-preview.2":
   version "4.0.0-preview.2"
   resolved "https://registry.yarnpkg.com/@azure/keyvault-secrets/-/keyvault-secrets-4.0.0-preview.2.tgz#bf5f8dd28d0c3629551fb04ad4743c0305b989af"
   integrity sha512-vboPWUoKLcoioKZCpDolt5NMtYtolM7mSXoAGkzGUhr9Uiez6aHITPh55Bb3rsOYDsXiMxJKcETukjXGcE7qbg==
@@ -433,7 +433,7 @@
   dependencies:
     "@types/jest-diff" "*"
 
-"@types/mockdate@^2.0.0":
+"@types/mockdate@2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@types/mockdate/-/mockdate-2.0.0.tgz#aaf388a1ead3b0f5ed6dc1611956ea7b40a57d3c"
   integrity sha1-qvOIoerTsPXtbcFhGVbqe0ClfTw=
@@ -1017,7 +1017,7 @@ data-urls@^1.0.0:
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
 
-dayjs@^1.8.15:
+dayjs@1.8.15:
   version "1.8.15"
   resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.15.tgz#7121bc04e6a7f2621ed6db566be4a8aaf8c3913e"
   integrity sha512-HYHCI1nohG52B45vCQg8Re3hNDZbMroWPkhz50yaX7Lu0ATyjGsTdoYZBpjED9ar6chqTx2dmSmM8A51mojnAg==
@@ -2876,7 +2876,7 @@ mkdirp@0.x, mkdirp@^0.5.0, mkdirp@^0.5.1:
   dependencies:
     minimist "0.0.8"
 
-mockdate@^2.0.3:
+mockdate@2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/mockdate/-/mockdate-2.0.3.tgz#f4095e5eaea94c5f8b4e0e708f5d79fdff846a66"
   integrity sha512-/wRyr3grWk3tyk188qjZpeiiAfkAoDPEGqyerretomeeaH0D+pN9MCcedhAwrkxX3a216gp8CwPeQMHfLvrFpA==
