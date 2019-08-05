@@ -14,20 +14,19 @@ Spark will delete all tweets posted yesterday.
 
 ## Environment Variables
 
-| Variable                     | Description                                    | Example      |
-| ---------------------------- | ---------------------------------------------- | ------------ |
-| `AZURE_CLIENT_ID`            | Azure AD Application Client ID                 | `xxxxxx-...` |
-| `AZURE_CLIENT_SECRET`        | Azure AD Application Secret                    | `xxxxxx`     |
-| `AZURE_TENANT_ID`            | Azure AD Tenant ID                             | `xxxxxx-...` |
-| `SPARK_AZURE_KEY_VAULT_NAME` | Azure Key Vault Container Name                 | `container`  |
-| `SPARK_DRY_RUN`              | Set to `true`, delete opration will be dry-run | `1`          |
-| `SPARK_TIME_DIFFERENCE`      | Time Difference between London                 | `+0900`      |
+If you set the following variables to Azure Key Vaults, use the value of the variable name corrected to the pascal case.  
+Example: `SPARK_TWITTER_ACCESS_TOKEN` is `SparkTwitterAccessToken`.
 
-## Key Vault Secrets
 
-| Secret                          | Description                            |
-| ------------------------------- | -------------------------------------- |
-| `SparkTwitterAccessToken`       | Twitter Authorized Access Token        |
-| `SparkTwitterAccessTokenSecret` | Twitter Authorized Access Token Secret |
-| `SparkTwitterConsumerKey`       | Twitter Application Consumer Key       |
-| `SparkTwitterConsumerSecret`    | Twitter Application Consumer Secret    |
+| Variable                            | Description                                     | Example      |
+| ----------------------------------- | ----------------------------------------------- | ------------ |
+| `AZURE_CLIENT_ID`                   | Azure AD Application Client ID                  | `xxxxxx-...` |
+| `AZURE_CLIENT_SECRET`               | Azure AD Application Secret                     | `xxxxxx`     |
+| `AZURE_TENANT_ID`                   | Azure AD Tenant ID                              | `xxxxxx-...` |
+| `SPARK_AZURE_KEY_VAULT_NAME`        | Azure Key Vault Container Name                  | `container`  |
+| `SPARK_DRY_RUN`                     | Set to `true`, delete operation will be dry-run | `1`          |
+| `SPARK_TIME_DIFFERENCE`             | Time Difference between London                  | `+0900`      |
+| `SPARK_TWITTER_ACCESS_TOKEN`        | Twitter Authorized Access Token                 | `xxxxxx`     |
+| `SPARK_TWITTER_ACCESS_TOKEN_SECRET` | Twitter Authorized Access Token Secret          | `xxxxxx...`  |
+| `SPARK_TWITTER_CONSUMER_KEY`        | Twitter Application Consumer Key                | `xxxxxx`     |
+| `SPARK_TWITTER_CONSUMER_SECRET`     | Twitter Application Consumer Secret             | `xxxxxx`     |

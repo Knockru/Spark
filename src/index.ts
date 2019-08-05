@@ -1,13 +1,16 @@
 import { AzureFunction, Context } from "@azure/functions";
+import { EnvironmentCredential } from "@azure/identity";
+import LookEnv, { AzureIdentity } from "@mikazuki/lookenv";
 
-import { FunctionEnv } from "./env";
 import { Envs } from "./types";
 import { Twtr } from "./twtr";
 
 export const run: AzureFunction = async function(context: Context, timer: any): Promise<void> {
   if (timer.IsPastDue) return; //
 
-  const env = new FunctionEnv<Envs>(process.env.SPARK_AZURE_KEY_VAULT_NAME);
+  const azure = new AzureIdentity(process.env.SPARK_AZURE_KEY_VAULT_NAME, new EnvironmentCredential());
+  const env = new LookEnv<Envs>(azure);
+
   const twtr = new Twtr(
     await env.get("SPARK_TWITTER_CONSUMER_KEY"),
     await env.get("SPARK_TWITTER_CONSUMER_SECRET"),
