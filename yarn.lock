@@ -363,7 +363,7 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^12.0.9"
 
-"@mikazuki/lookenv@^0.1.1":
+"@mikazuki/lookenv@0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@mikazuki/lookenv/-/lookenv-0.1.1.tgz#83e156552ea2e4882c916f4b768d9359300932ba"
   integrity sha512-sXiCFkOUgibYXCxw2ZQ3i3mVbRdhWMFz+HA2ZZ/VeTeqtGGuV9qKTVRQdOs5tlGToGAMUnLfQ0IO02uFrRKKag==
