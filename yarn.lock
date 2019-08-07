@@ -2,10 +2,41 @@
 # yarn lockfile v1
 
 
+"@azure/abort-controller@1.0.0-preview.1":
+  version "1.0.0-preview.1"
+  resolved "https://registry.yarnpkg.com/@azure/abort-controller/-/abort-controller-1.0.0-preview.1.tgz#75b8ac03f7647a9f4a047e23ffe2e3ea037eb60a"
+  integrity sha512-NnJqi6oHqt06Q2hz4nO1HO0QlyusBa3E/wezvn9flHEtl0IHYSmzGbtlb+MaAJ5GzxwqSevQ4q1+4B8fvVijOA==
+  dependencies:
+    tslib "^1.9.3"
+
 "@azure/core-asynciterator-polyfill@^1.0.0-preview.1":
   version "1.0.0-preview.1"
   resolved "https://registry.yarnpkg.com/@azure/core-asynciterator-polyfill/-/core-asynciterator-polyfill-1.0.0-preview.1.tgz#ad7c726cfd73c946dbfbc3e485338ccf678fc75a"
   integrity sha512-hMp0y+j/odkAyTa5TYewn4hUlFdEe3sR9uTd2Oq+se61RtuDsqM7UWrNNlyylPyjIENSZHJVWN7jte/jvvMN2Q==
+
+"@azure/core-auth@1.0.0-preview.2":
+  version "1.0.0-preview.2"
+  resolved "https://registry.yarnpkg.com/@azure/core-auth/-/core-auth-1.0.0-preview.2.tgz#470157370f15359a43c65e2cf457468d29dde249"
+  integrity sha512-QATxlKPP2Yld8+eg8Hz8mXmowlG/z9B53HTkjBz0oJIzR+dBm9HJY2bPnT7RB8nyqdnm8JpU2mIp8YVZZO6ubg==
+  dependencies:
+    "@azure/abort-controller" "1.0.0-preview.1"
+    tslib "^1.9.3"
+
+"@azure/core-http@1.0.0-preview.2":
+  version "1.0.0-preview.2"
+  resolved "https://registry.yarnpkg.com/@azure/core-http/-/core-http-1.0.0-preview.2.tgz#623acdcdda6340650b9055efc69b12df836a4c27"
+  integrity sha512-7zvbuMxwFjqvZ8knyEky+tWJYq6nK/pDIOI44nuCsdzdeCA8G9Ul3tXuQ+1lI4NOUfd2Scj8Ckgb4Xh9+ckOuw==
+  dependencies:
+    "@azure/core-auth" "1.0.0-preview.2"
+    "@types/tunnel" "^0.0.1"
+    axios "^0.19.0"
+    form-data "^2.5.0"
+    process "^0.11.10"
+    tough-cookie "^3.0.1"
+    tslib "^1.9.3"
+    tunnel "^0.0.6"
+    uuid "^3.3.2"
+    xml2js "^0.4.19"
 
 "@azure/core-http@^1.0.0-preview.1":
   version "1.0.0-preview.1"
@@ -34,7 +65,20 @@
   resolved "https://registry.yarnpkg.com/@azure/functions/-/functions-1.0.3.tgz#1b51d58f188903f59f39bd093fe6f7b8d88deb11"
   integrity sha512-/D+sz6LgWT+A6RRW2zhwlwhKqqDSxL6HCF1Q1lN0iXolD2FfNFZpzrOxGyGYEEXp/5Dtjp12bcRTBhMH1cBi2Q==
 
-"@azure/identity@1.0.0-preview.1", "@azure/identity@^1.0.0-preview.1":
+"@azure/identity@1.0.0-preview.2":
+  version "1.0.0-preview.2"
+  resolved "https://registry.yarnpkg.com/@azure/identity/-/identity-1.0.0-preview.2.tgz#ef3064b0fc6c2c4e3557d20e8be837f9bfec6216"
+  integrity sha512-fQVgPdFj6UlvryhuE8OZp8rElmTRxjIYpiK2gC0m/wxownxznAXvNcdCEvbucc563+2zgFLlli927o0uXC1NmA==
+  dependencies:
+    "@azure/core-http" "1.0.0-preview.2"
+    events "^3.0.0"
+    jws "~3.2.2"
+    msal "~1.0.2"
+    qs "6.7.0"
+    tslib "^1.9.3"
+    uuid "^3.3.2"
+
+"@azure/identity@^1.0.0-preview.1":
   version "1.0.0-preview.1"
   resolved "https://registry.yarnpkg.com/@azure/identity/-/identity-1.0.0-preview.1.tgz#a33315cf12367b631ab34f4ef08b6e3b0073fc78"
   integrity sha512-AM/OXOVojj+A850c3Un5RTJSBh2cugYZqbicW2TzsuQAjDaAh8DnBseW1x9BhfZQ/RWk2Vh/GJ3SHK0X0Ab7dA==
@@ -477,6 +521,13 @@
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/@types/tunnel/-/tunnel-0.0.0.tgz#c2a42943ee63c90652a5557b8c4e56cda77f944e"
   integrity sha512-FGDp0iBRiBdPjOgjJmn1NH0KDLN+Z8fRmo+9J7XGBhubq1DPrGrbmG4UTlGzrpbCpesMqD0sWkzi27EYkOMHyg==
+  dependencies:
+    "@types/node" "*"
+
+"@types/tunnel@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@types/tunnel/-/tunnel-0.0.1.tgz#0d72774768b73df26f25df9184273a42da72b19c"
+  integrity sha512-AOqu6bQu5MSWwYvehMXLukFHnupHrpZ8nvgae5Ggie9UwzDR1CCwoXgSSWNZJuyOlCdfdsWMA5F2LlmvyoTv8A==
   dependencies:
     "@types/node" "*"
 
@@ -1948,6 +1999,11 @@ invert-kv@^2.0.0:
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-2.0.0.tgz#7393f5afa59ec9ff5f67a27620d11c226e3eec02"
   integrity sha512-wPVv/y/QQ/Uiirj/vh3oP+1Ww+AWehmi1g5fFWGPF6IpCBCDVrhgHRMvrLfdYcwDh3QJbGXDW4JAuzxElLSqKA==
 
+ip-regex@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/ip-regex/-/ip-regex-2.1.0.tgz#fa78bf5d2e6913c911ce9f819ee5146bb6d844e9"
+  integrity sha1-+ni/XS5pE8kRzp+BnuUUa7bYROk=
+
 is-accessor-descriptor@^0.1.6:
   version "0.1.6"
   resolved "https://registry.yarnpkg.com/is-accessor-descriptor/-/is-accessor-descriptor-0.1.6.tgz#a9e12cb3ae8d876727eeef3843f8a0897b5c98d6"
@@ -2544,6 +2600,11 @@ jest@24.8.0:
     import-local "^2.0.0"
     jest-cli "^24.8.0"
 
+js-base64@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.5.1.tgz#1efa39ef2c5f7980bb1784ade4a8af2de3291121"
+  integrity sha512-M7kLczedRMYX4L8Mdh4MzyAMM9O5osx+4FcOQuTvr3A9F2D9S5JXheN0ewNbrvK2UatkTRhL5ejGmGSjNMiZuw==
+
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -2932,6 +2993,14 @@ ms@^2.1.1:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
+
+msal@~1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/msal/-/msal-1.0.2.tgz#9dc75e3cce7ec8d5e1a448f921c42fff45056407"
+  integrity sha512-jWbuqLg0jFWj/Wy9A9LbJahuDguQI1KI4y06HOG7OFKHWdXJ8DJCgbwlCSoq2nUM0cbGfhsYX6MRDxJ7R3ZrAg==
+  dependencies:
+    js-base64 "^2.5.1"
+    tslib "^1.9.3"
 
 mute-stream@0.0.7:
   version "0.0.7"
@@ -4162,6 +4231,15 @@ tough-cookie@^2.3.3, tough-cookie@^2.3.4, tough-cookie@^2.4.3:
     psl "^1.1.28"
     punycode "^2.1.1"
 
+tough-cookie@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-3.0.1.tgz#9df4f57e739c26930a018184887f4adb7dca73b2"
+  integrity sha512-yQyJ0u4pZsv9D4clxO69OEjLWYw+jbgspjTue4lTQZLfV0c5l1VmK2y1JK8E9ahdpltPOaAThPcp5nKPUgSnsg==
+  dependencies:
+    ip-regex "^2.1.0"
+    psl "^1.1.28"
+    punycode "^2.1.1"
+
 tough-cookie@~2.4.3:
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.4.3.tgz#53f36da3f47783b0925afa06ff9f3b165280f781"
@@ -4209,7 +4287,7 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-tunnel@0.0.6:
+tunnel@0.0.6, tunnel@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/tunnel/-/tunnel-0.0.6.tgz#72f1314b34a5b192db012324df2cc587ca47f92c"
   integrity sha512-1h/Lnq9yajKY2PEbBadPXj3VxsDDu844OnaAo52UVmIzIvwwtBPIuNvkjuzBlTWpfJyUbG3ez0KSBibQkj4ojg==
