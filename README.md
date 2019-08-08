@@ -7,10 +7,12 @@ Spark will delete all tweets posted yesterday.
 
 ## Information
 
+If you want to change scheduled time, please change `bindings.[0].schedule` in `spark/function.json`.  
+
 | Key      | Value                   |
 | -------- | ----------------------- |
 | Trigger  | Timer                   |
-| Schedule | 15:30 (GMT) on everyday |
+| Schedule | 00:30 (JST) on everyday |
 
 ## Environment Variables
 
@@ -18,15 +20,15 @@ If you set the following variables to Azure Key Vaults, use the value of the var
 Example: `SPARK_TWITTER_ACCESS_TOKEN` is `SparkTwitterAccessToken`.
 
 
-| Variable                            | Description                                     | Example      |
-| ----------------------------------- | ----------------------------------------------- | ------------ |
-| `AZURE_CLIENT_ID`                   | Azure AD Application Client ID                  | `xxxxxx-...` |
-| `AZURE_CLIENT_SECRET`               | Azure AD Application Secret                     | `xxxxxx`     |
-| `AZURE_TENANT_ID`                   | Azure AD Tenant ID                              | `xxxxxx-...` |
-| `SPARK_AZURE_KEY_VAULT_NAME`        | Azure Key Vault Container Name                  | `container`  |
-| `SPARK_DRY_RUN`                     | Set to `true`, delete operation will be dry-run | `1`          |
-| `SPARK_TIME_DIFFERENCE`             | Time Difference between London                  | `+0900`      |
-| `SPARK_TWITTER_ACCESS_TOKEN`        | Twitter Authorized Access Token                 | `xxxxxx`     |
-| `SPARK_TWITTER_ACCESS_TOKEN_SECRET` | Twitter Authorized Access Token Secret          | `xxxxxx...`  |
-| `SPARK_TWITTER_CONSUMER_KEY`        | Twitter Application Consumer Key                | `xxxxxx`     |
-| `SPARK_TWITTER_CONSUMER_SECRET`     | Twitter Application Consumer Secret             | `xxxxxx`     |
+| Variable                            | Description                                     | Example               |
+| ----------------------------------- | ----------------------------------------------- | --------------------- |
+| `AZURE_CLIENT_ID`                   | Azure AD Application Client ID                  | `xxxxxx-...`          |
+| `AZURE_CLIENT_SECRET`               | Azure AD Application Secret                     | `xxxxxx`              |
+| `AZURE_TENANT_ID`                   | Azure AD Tenant ID                              | `xxxxxx-...`          |
+| `SPARK_AZURE_KEY_VAULT_NAME`        | Azure Key Vault Container Name                  | `container`           |
+| `SPARK_DRY_RUN`                     | Set to `true`, delete operation will be dry-run | `1`                   |
+| `SPARK_TWITTER_ACCESS_TOKEN`        | Twitter Authorized Access Token                 | `xxxxxx`              |
+| `SPARK_TWITTER_ACCESS_TOKEN_SECRET` | Twitter Authorized Access Token Secret          | `xxxxxx...`           |
+| `SPARK_TWITTER_CONSUMER_KEY`        | Twitter Application Consumer Key                | `xxxxxx`              |
+| `SPARK_TWITTER_CONSUMER_SECRET`     | Twitter Application Consumer Secret             | `xxxxxx`              |
+| `WEBSITE_TIME_ZONE`                 | Timezone of running this function               | `Tokyo Standard Time` |
