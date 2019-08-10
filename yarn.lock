@@ -71,10 +71,10 @@
     tslib "^1.9.3"
     uuid "^3.3.2"
 
-"@azure/keyvault-secrets@4.0.0-preview.3":
-  version "4.0.0-preview.3"
-  resolved "https://registry.yarnpkg.com/@azure/keyvault-secrets/-/keyvault-secrets-4.0.0-preview.3.tgz#ab2c437652abaf307ec22e07b28ee39d290d6a2a"
-  integrity sha512-wyb/jnqRnSf1jSe20ZNxcv7rYlX95N+D8bs8TYIDfHciao4F8djKAwBggfodXcy0RxFqI48PXANR6nUS9wbkDg==
+"@azure/keyvault-secrets@4.0.0-preview.4":
+  version "4.0.0-preview.4"
+  resolved "https://registry.yarnpkg.com/@azure/keyvault-secrets/-/keyvault-secrets-4.0.0-preview.4.tgz#6b85728dfc5249f0f3b351fa572323e1a27e4e4a"
+  integrity sha512-xOC+JwODcsTr62ng10uU6+6nEaf+gyR55ZosWBKYt0haoFJP/2RcEI5OS5I1H/unEwMGSePiosIqNvRHjwdTfA==
   dependencies:
     "@azure/abort-controller" "1.0.0-preview.1"
     "@azure/core-arm" "1.0.0-preview.2"
