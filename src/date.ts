@@ -1,7 +1,7 @@
 import { windowsToIana } from "@mikazuki/tz-convert";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
-import { findTimeZone, getUnixTime, getZonedTime } from "timezone-support";
+import { findTimeZone, getZonedTime } from "timezone-support";
 
 dayjs.extend(utc);
 
@@ -28,11 +28,9 @@ function toUnixTime(time: Time): number {
 function compare(a: Time, b: Time, method: "<=" | "<"): boolean {
   if (method === "<=") {
     return toUnixTime(a) <= toUnixTime(b);
-    // return a.year <= b.year && a.month <= b.month && a.day <= b.day && a.hours <= b.hours && a.minutes <= b.minutes && a.seconds <= b.seconds && a.milliseconds <= b.milliseconds;
   }
 
   return toUnixTime(a) < toUnixTime(b);
-  // return a.year < b.year && a.month < b.month && a.day < b.day && a.hours < b.hours && a.minutes < b.minutes && a.seconds < b.seconds && a.milliseconds < b.milliseconds;
 }
 
 export function isYesterday(str: string, timezone: string = null): boolean {
