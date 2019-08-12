@@ -8,10 +8,3 @@ export type Variables =
   | "SPARK_TWITTER_CONSUMER_SECRET"
   | "SPARK_TWITTER_ACCESS_TOKEN"
   | "SPARK_TWITTER_ACCESS_TOKEN_SECRET";
-
-export namespace TwitterResponse {
-  export type Status = {
-    created_at: string;
-    id_str: string;
-  };
-}
