@@ -1,40 +1,79 @@
+import { windowsToIana } from "@mikazuki/tz-convert";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
+import { findTimeZone, getUnixTime, getZonedTime } from "timezone-support";
 
 dayjs.extend(utc);
 
-export function calcTimeDifference(diff: string = null): number {
-  if (!diff) diff = process.env.SPARK_TIME_DIFFERENCE;
+type Time = {
+  year: number;
+  month: number;
+  day: number;
+  hours: number;
+  minutes: number;
+  seconds?: number;
+  milliseconds?: number;
+  dayOfWeek?: number;
+  epoch?: number;
+  zone?: {
+    abbreviation?: string;
+    offset: number;
+  };
+};
 
-  const matches = diff.match(/([+-])(\w{2})(\w{2})/);
-  if (matches.length != 4) throw new Error("Invalid Format");
-
-  return (matches[1] === "+" ? 1 : -1) * (parseInt(matches[2]) + parseInt(matches[3]) / 60);
+function toUnixTime(time: Time): number {
+  return Date.UTC(time.year, time.month - 1, time.day, time.hours, time.minutes, time.seconds, time.milliseconds) + time.zone.offset * 60000;
 }
 
-export function isYesterday(str: string, diff: string = null): boolean {
-  const tz = calcTimeDifference(diff);
-  const day = dayjs(str)
-    .utc() // Azure Functions is always UTC
-    .add(tz, "hour");
-  const today = dayjs()
-    .utc() // Azure Functions is always UTC
-    .add(tz, "hour")
-    .startOf("date");
+function compare(a: Time, b: Time, method: "<=" | "<"): boolean {
+  if (method === "<=") {
+    return toUnixTime(a) <= toUnixTime(b);
+    // return a.year <= b.year && a.month <= b.month && a.day <= b.day && a.hours <= b.hours && a.minutes <= b.minutes && a.seconds <= b.seconds && a.milliseconds <= b.milliseconds;
+  }
 
-  return today.subtract(1, "day") <= day && day < today;
+  return toUnixTime(a) < toUnixTime(b);
+  // return a.year < b.year && a.month < b.month && a.day < b.day && a.hours < b.hours && a.minutes < b.minutes && a.seconds < b.seconds && a.milliseconds < b.milliseconds;
 }
 
-export function isTooPast(str: string, diff: string = null): boolean {
-  const tz = calcTimeDifference(diff);
-  const day = dayjs(str)
-    .utc() // Azure Functions is always UTC
-    .add(tz, "hour");
-  const yesterday = dayjs()
-    .utc() // Azure Functions is always UTC
-    .add(tz, "hour")
-    .startOf("date")
-    .subtract(1, "day");
+export function isYesterday(str: string, timezone: string = null): boolean {
+  const tzInfo = findTimeZone(windowsToIana(timezone));
+  const dt = getZonedTime(
+    dayjs(str)
+      .utc()
+      .toDate(),
+    tzInfo
+  );
 
-  return day < yesterday;
+  const startOfToday = Object.assign(
+    getZonedTime(
+      dayjs()
+        .utc()
+        .toDate(),
+      tzInfo
+    ),
+    { hours: 0, minutes: 0, seconds: 0, milliseconds: 0 }
+  );
+
+  return compare({ ...startOfToday, day: startOfToday.day - 1 }, dt, "<=") && compare(dt, startOfToday, "<");
+}
+
+export function isTooPast(str: string, timezone: string = null): boolean {
+  const tzInfo = findTimeZone(windowsToIana(timezone));
+  const dt = getZonedTime(
+    dayjs(str)
+      .utc()
+      .toDate(),
+    tzInfo
+  );
+  const startOfToday = Object.assign(
+    getZonedTime(
+      dayjs()
+        .utc()
+        .toDate(),
+      tzInfo
+    ),
+    { hours: 0, minutes: 0, seconds: 0, milliseconds: 0 }
+  );
+
+  return compare(dt, { ...startOfToday, day: startOfToday.day - 1 }, "<");
 }

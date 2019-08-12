@@ -15,7 +15,9 @@
     "@azure/identity": "1.0.0-preview.2",
     "@azure/keyvault-secrets": "4.0.0-preview.4",
     "@mikazuki/lookenv": "0.1.1",
-    "dayjs": "1.8.15",
+    "@mikazuki/tz-convert": "^0.1.1",
+    "dayjs": "^1.8.15",
+    "timezone-support": "^2.0.2",
     "twitter": "1.7.1"
   },
   "devDependencies": {
