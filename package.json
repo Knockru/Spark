@@ -15,9 +15,9 @@
     "@azure/identity": "1.0.0-preview.2",
     "@azure/keyvault-secrets": "4.0.0-preview.4",
     "@mikazuki/lookenv": "0.1.1",
-    "@mikazuki/tz-convert": "^0.1.1",
-    "dayjs": "^1.8.15",
-    "timezone-support": "^2.0.2",
+    "@mikazuki/tz-convert": "0.1.1",
+    "dayjs": "1.8.15",
+    "timezone-support": "2.0.2",
     "twitter": "1.7.1"
   },
   "devDependencies": {
@@ -25,8 +25,8 @@
     "@types/jest": "24.0.17",
     "@types/mockdate": "2.0.0",
     "@types/twitter": "1.7.0",
-    "@typescript-eslint/eslint-plugin": "^1.13.0",
-    "@typescript-eslint/parser": "^1.13.0",
+    "@typescript-eslint/eslint-plugin": "1.13.0",
+    "@typescript-eslint/parser": "1.13.0",
     "eslint": "6.1.0",
     "eslint-config-airbnb-base": "14.0.0",
     "eslint-config-prettier": "6.0.0",
