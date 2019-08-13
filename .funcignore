@@ -1,7 +1,13 @@
 *.js.map
 *.ts
 .git*
-.vscode
+*.log
+.*
+__tests__
+src
+jest.config.js
+LICENSE
 local.settings.json
-test
+README.md
+renovate.json
 tsconfig.json
