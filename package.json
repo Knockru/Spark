@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@azure/identity": "1.0.0",
-    "@azure/keyvault-secrets": "4.0.0-preview.9",
+    "@azure/keyvault-secrets": "4.0.0",
     "@mikazuki/lookenv": "0.1.1",
     "@mikazuki/tz-convert": "0.1.1",
     "dayjs": "1.8.16",
