@@ -98,17 +98,18 @@
     tslib "^1.9.3"
     uuid "^3.3.2"
 
-"@azure/keyvault-secrets@4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@azure/keyvault-secrets/-/keyvault-secrets-4.0.0.tgz#f6c892cf3ddf0925e9cf6b1bef039468d255d227"
-  integrity sha512-C22NfIL+Lm1rEdg28DyhCZPZ1CQm0o6U79oNnjFV2fsgaR/wRyrM/zfDJ4dok8yrhKX8+O1SLmGHDkp0ro+mBQ==
+"@azure/keyvault-secrets@4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@azure/keyvault-secrets/-/keyvault-secrets-4.0.2.tgz#b76375c31e54f903b07367d30ff9574a6bc87e34"
+  integrity sha512-WDOZ4uMRN3SqItHeW24MJYVbkptLojzbblFEVAR3q1dnpBEL6Ah4g/GVJcM9xJgEsPJR8fqt3WF/A0V25LbJZg==
   dependencies:
     "@azure/abort-controller" "^1.0.0"
     "@azure/core-http" "^1.0.0"
     "@azure/core-lro" "^1.0.0"
     "@azure/core-paging" "^1.0.0"
-    "@azure/core-tracing" "1.0.0-preview.5"
+    "@azure/core-tracing" "1.0.0-preview.7"
     "@azure/logger" "^1.0.0"
+    "@opentelemetry/types" "^0.2.0"
     tslib "^1.9.3"
 
 "@azure/logger@^1.0.0":
