@@ -24,7 +24,7 @@
     "@opentelemetry/api" "^0.6.1"
     tslib "^1.10.0"
 
-"@azure/core-http@^1.0.0", "@azure/core-http@^1.1.1":
+"@azure/core-http@^1.0.0", "@azure/core-http@^1.1.0", "@azure/core-http@^1.1.1":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@azure/core-http/-/core-http-1.1.2.tgz#2e63e073d8e773fb83d3f67ad14e94629806417b"
   integrity sha512-xeZpTs6caBIrRipqZs70jgrA+mAFxII5XrBzbOCELPs18n4QWfchB20F94ITAk3GuFVDaSBsOhVL3GP1J+ncGg==
@@ -102,18 +102,18 @@
     tslib "^1.9.3"
     uuid "^3.3.2"
 
-"@azure/keyvault-secrets@4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@azure/keyvault-secrets/-/keyvault-secrets-4.0.2.tgz#b76375c31e54f903b07367d30ff9574a6bc87e34"
-  integrity sha512-WDOZ4uMRN3SqItHeW24MJYVbkptLojzbblFEVAR3q1dnpBEL6Ah4g/GVJcM9xJgEsPJR8fqt3WF/A0V25LbJZg==
+"@azure/keyvault-secrets@4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@azure/keyvault-secrets/-/keyvault-secrets-4.0.3.tgz#7e93049c7e06852e79cb04a70c9f488928f3b0af"
+  integrity sha512-Ctsf+OI3UAtYmuaEdmN32mc/APpl7BVV/nCIbXlEgfzCvpAuHSsSk7UFF5Qu92e+M9tzKN3SW/dbqJPtgXsGHQ==
   dependencies:
     "@azure/abort-controller" "^1.0.0"
-    "@azure/core-http" "^1.0.0"
+    "@azure/core-http" "^1.1.0"
     "@azure/core-lro" "^1.0.0"
     "@azure/core-paging" "^1.0.0"
-    "@azure/core-tracing" "1.0.0-preview.7"
+    "@azure/core-tracing" "1.0.0-preview.8"
     "@azure/logger" "^1.0.0"
-    "@opentelemetry/types" "^0.2.0"
+    "@opentelemetry/api" "^0.6.1"
     tslib "^1.9.3"
 
 "@azure/logger@^1.0.0":
