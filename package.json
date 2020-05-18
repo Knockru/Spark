@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@azure/functions": "1.0.3",
-    "@types/jest": "24.0.25",
+    "@types/jest": "25.2.3",
     "@types/mockdate": "2.0.0",
     "@types/twitter": "1.7.0",
     "@typescript-eslint/eslint-plugin": "2.14.0",
