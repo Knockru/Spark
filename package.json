@@ -16,7 +16,7 @@
     "@azure/keyvault-secrets": "4.0.4",
     "@mikazuki/lookenv": "0.1.1",
     "@mikazuki/tz-convert": "0.1.1",
-    "dayjs": "1.8.31",
+    "dayjs": "1.8.32",
     "timezone-support": "2.0.2",
     "twitter": "1.7.1"
   },
