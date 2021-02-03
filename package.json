@@ -21,7 +21,7 @@
     "twitter": "1.7.1"
   },
   "devDependencies": {
-    "@azure/functions": "1.0.3",
+    "@azure/functions": "1.2.3",
     "@types/jest": "24.0.25",
     "@types/mockdate": "2.0.0",
     "@types/twitter": "1.7.0",
