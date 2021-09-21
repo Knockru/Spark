@@ -24,7 +24,15 @@
     "@opentelemetry/api" "^0.6.1"
     tslib "^2.0.0"
 
-"@azure/core-http@^1.0.0", "@azure/core-http@^1.1.0", "@azure/core-http@^1.1.1":
+"@azure/core-auth@^1.3.0":
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/@azure/core-auth/-/core-auth-1.3.2.tgz#6a2c248576c26df365f6c7881ca04b7f6d08e3d0"
+  integrity sha512-7CU6DmCHIZp5ZPiZ9r3J17lTKMmYsm/zGvNkjArQwPkrLlZ1TZ+EUYfGgh2X31OLMVAQCTJZW4cXHJi02EbJnA==
+  dependencies:
+    "@azure/abort-controller" "^1.0.0"
+    tslib "^2.2.0"
+
+"@azure/core-http@^1.0.0":
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/@azure/core-http/-/core-http-1.1.6.tgz#9d76bc569c9907e3224bd09c09b4ac08bde9faf8"
   integrity sha512-/C+qNzhwlLKt0F6SjaBEyY2pwZvwL2LviyS5PHlCh77qWuTF1sETmYAINM88BCN+kke+UlECK4YOQaAjJwyHvQ==
@@ -45,22 +53,51 @@
     uuid "^8.1.0"
     xml2js "^0.4.19"
 
-"@azure/core-lro@^1.0.0":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@azure/core-lro/-/core-lro-1.0.2.tgz#b7b51ff7b84910b7eb152a706b0531d020864f31"
-  integrity sha512-Yr0JD7GKryOmbcb5wHCQoQ4KCcH5QJWRNorofid+UvudLaxnbCfvKh/cUfQsGUqRjO9L/Bw4X7FP824DcHdMxw==
+"@azure/core-http@^2.0.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@azure/core-http/-/core-http-2.1.0.tgz#9fb564aea06484eaf9f05cf4fae16fd16f640383"
+  integrity sha512-Pzj87F4b1RH4PFDUpxkZqCdDZ35c5AjDCt3lsTn3i7yCtrXasEm6PVJYhjwsvYYmtgM7aDZIXexcu/qLLf7kyA==
   dependencies:
     "@azure/abort-controller" "^1.0.0"
-    "@azure/core-http" "^1.1.1"
-    events "^3.0.0"
-    tslib "^1.10.0"
+    "@azure/core-asynciterator-polyfill" "^1.0.0"
+    "@azure/core-auth" "^1.3.0"
+    "@azure/core-tracing" "1.0.0-preview.13"
+    "@azure/logger" "^1.0.0"
+    "@types/node-fetch" "^2.5.0"
+    "@types/tunnel" "^0.0.1"
+    form-data "^3.0.0"
+    node-fetch "^2.6.0"
+    process "^0.11.10"
+    tough-cookie "^4.0.0"
+    tslib "^2.2.0"
+    tunnel "^0.0.6"
+    uuid "^8.3.0"
+    xml2js "^0.4.19"
 
-"@azure/core-paging@^1.0.0":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@azure/core-paging/-/core-paging-1.1.1.tgz#9639d2d5b6631d481d81040504e0e26c003f47b1"
-  integrity sha512-hqEJBEGKan4YdOaL9ZG/GRG6PXaFd/Wb3SSjQW4LWotZzgl6xqG00h6wmkrpd2NNkbBkD1erLHBO3lPHApv+iQ==
+"@azure/core-lro@^2.0.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@azure/core-lro/-/core-lro-2.1.0.tgz#c06e7012927dbd3063107f4ce6b50adbdeb96297"
+  integrity sha512-7T9+HxZArl1wIUM/jacaeeMC9lUo14M62y3Htkh9qkTjI5glc7NlY2XOQ67n2jN1HONd8FvqCXE9CS4ZRxeLcg==
+  dependencies:
+    "@azure/abort-controller" "^1.0.0"
+    "@azure/core-tracing" "1.0.0-preview.13"
+    "@azure/logger" "^1.0.0"
+    tslib "^2.2.0"
+
+"@azure/core-paging@^1.1.1":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@azure/core-paging/-/core-paging-1.1.3.tgz#3587c9898a0530cacb64bab216d7318468aa5efc"
+  integrity sha512-his7Ah40ThEYORSpIAwuh6B8wkGwO/zG7gqVtmSE4WAJ46e36zUDXTKReUCLBDc6HmjjApQQxxcRFy5FruG79A==
   dependencies:
     "@azure/core-asynciterator-polyfill" "^1.0.0"
+
+"@azure/core-tracing@1.0.0-preview.13":
+  version "1.0.0-preview.13"
+  resolved "https://registry.yarnpkg.com/@azure/core-tracing/-/core-tracing-1.0.0-preview.13.tgz#55883d40ae2042f6f1e12b17dd0c0d34c536d644"
+  integrity sha512-KxDlhXyMlh2Jhj2ykX6vNEU0Vou4nHr025KoSEiz7cS3BNiHNaZcdECk/DmLkEB0as5T7b/TpRcehJ5yV6NeXQ==
+  dependencies:
+    "@opentelemetry/api" "^1.0.1"
+    tslib "^2.2.0"
 
 "@azure/core-tracing@1.0.0-preview.7":
   version "1.0.0-preview.7"
@@ -110,19 +147,18 @@
     tslib "^1.9.3"
     uuid "^3.3.2"
 
-"@azure/keyvault-secrets@4.0.4":
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/@azure/keyvault-secrets/-/keyvault-secrets-4.0.4.tgz#0dc880188bbff750fc9cb5d993b9d09b52a80233"
-  integrity sha512-yg+/5c9nCvfUAY+QHWwLfAvt2isrbqmNxBqJz+Y18ZzztH97Aj0x5LDoFZYEFbPQgYHb+vckfUgcnvAhWy159g==
+"@azure/keyvault-secrets@4.3.0":
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/@azure/keyvault-secrets/-/keyvault-secrets-4.3.0.tgz#e0ea4730a2ad8874b80909ce0e9a54b837fed4ab"
+  integrity sha512-bhdAr2Yjx+XpgfkClOufpTxcnKqDIwyOSKrbI9mJ2q5wQNb7Z1WPnPnIhjdsw1on/NRXzMaarYFNkf/MdS73FA==
   dependencies:
     "@azure/abort-controller" "^1.0.0"
-    "@azure/core-http" "^1.1.0"
-    "@azure/core-lro" "^1.0.0"
-    "@azure/core-paging" "^1.0.0"
-    "@azure/core-tracing" "1.0.0-preview.8"
+    "@azure/core-http" "^2.0.0"
+    "@azure/core-lro" "^2.0.0"
+    "@azure/core-paging" "^1.1.1"
+    "@azure/core-tracing" "1.0.0-preview.13"
     "@azure/logger" "^1.0.0"
-    "@opentelemetry/api" "^0.6.1"
-    tslib "^1.9.3"
+    tslib "^2.2.0"
 
 "@azure/logger@^1.0.0":
   version "1.0.0"
@@ -501,6 +537,11 @@
   integrity sha512-wpufGZa7tTxw7eAsjXJtiyIQ42IWQdX9iUQp7ACJcKo1hCtuhLU+K2Nv1U6oRwT1oAlZTE6m4CgWKZBhOiau3Q==
   dependencies:
     "@opentelemetry/context-base" "^0.6.1"
+
+"@opentelemetry/api@^1.0.1":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@opentelemetry/api/-/api-1.0.2.tgz#921e1f2b2484b762d77225a8a25074482d93fccf"
+  integrity sha512-DCF9oC89ao8/EJUqrp/beBlDR8Bp2R43jqtzayqCoomIvkwTuPfLcHdVhIGRR69GFlkykFjcDW+V92t0AS7Tww==
 
 "@opentelemetry/context-base@^0.10.2":
   version "0.10.2"
@@ -4212,6 +4253,11 @@ tslib@^2.0.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.1.tgz#410eb0d113e5b6356490eec749603725b021b43e"
   integrity sha512-SgIkNheinmEBgx1IUNirK0TUD4X9yjjBRTqqjggWCU3pUEqIk3/Uwl3yRixYKT6WjQuGiwDv4NomL3wqRCj+CQ==
 
+tslib@^2.2.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.0.tgz#803b8cdab3e12ba581a4ca41c8839bbb0dacb09e"
+  integrity sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==
+
 tsutils@^3.17.1:
   version "3.17.1"
   resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-3.17.1.tgz#ed719917f11ca0dee586272b2ac49e015a2dd759"
@@ -4325,6 +4371,11 @@ uuid@^8.1.0:
   version "8.3.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.0.tgz#ab738085ca22dc9a8c92725e459b1d507df5d6ea"
   integrity sha512-fX6Z5o4m6XsXBdli9g7DtWgAx+osMsRRZFKma1mIUsLCz6vRvv+pz5VNbyu9UEDzpMWulZfvpgb/cmDXVulYFQ==
+
+uuid@^8.3.0:
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
+  integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
 
 v8-compile-cache@^2.0.3:
   version "2.1.1"
