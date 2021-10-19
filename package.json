@@ -12,7 +12,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@azure/identity": "1.0.3",
+    "@azure/identity": "1.5.2",
     "@azure/keyvault-secrets": "4.0.4",
     "@mikazuki/lookenv": "0.1.1",
     "@mikazuki/tz-convert": "0.1.1",
